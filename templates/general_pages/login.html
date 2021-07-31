@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="general__container">
+    <h2 class="title_center">Iniciar sesión</h2>
+	<form action="{{ url_for('login') }}" method="post">
+        <dl>
+            <dt>Usuario:</dt>
+            <dd><input type="text" name="username" class="general_input"></dd>
+            <dt>Contraseña:</dt>
+            <dd><input type="password" name="password" class="general_input"></dd>
+        </dl>
+        <input type="submit" value="Continuar" class="general_btn">
+	</form>
+</div>
+{% endblock %}

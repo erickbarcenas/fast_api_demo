@@ -1,0 +1,75 @@
+/* ................................*/
+/*              GENERAL            */
+/* ................................*/
+
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+.general__container{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+    width: 20rem;
+}
+
+.general_btn{
+    background-color: #138db1;
+    border: none;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.general_input{
+    width: 100%;
+}
+/* ................................*/
+/*              TITLES             */
+/* ................................*/
+
+.title_center{
+    text-align: center;
+}
+
+/* ................................*/
+/*              HEADER             */
+/* ................................*/
+
+.header{
+    background: #138db1;
+    color: white;
+    display: flex;
+    padding: .5rem 10%;
+    margin: 0;
+}
+
+.header .header_logo{
+    margin-right: 2rem;
+}
+
+.header .header__list {
+    align-content: space-between;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+}
+
+.header .header__list .header__item {
+    margin-right: 1rem;
+}
+
+
+
+
+/* ................................*/
+/*              LOGIN - FORM       */
+/* ................................*/

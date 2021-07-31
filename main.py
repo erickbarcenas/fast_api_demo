@@ -1,10 +1,14 @@
 from typing import Optional
-
-from fastapi import FastAPI
-
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 users = {
     1: {"id": 1, "name": "Erick", "age": 20},
@@ -19,8 +23,14 @@ class Item(BaseModel):
 
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def read_root(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+
+@app.post("/")
+def login(request: Request):
+    print(Request)
+
 
 
 @app.get("/items/{item_id}")
